@@ -1,0 +1,97 @@
+@import "../../constants/variable";
+
+$eclipse_unit: 27rem;
+
+.navbar { 
+    
+    &__left-eclipse {
+        position: absolute;
+        top: - $eclipse_unit / 2;
+        bottom: 0;
+        left: - $eclipse_unit / 2;
+        right: 0;
+        width: $eclipse_unit;
+        height: $eclipse_unit;
+        border-radius: 50%;
+        background-color: $base-color;
+        z-index: -999;
+    }
+
+    &__nav-items { 
+
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 20px 0 0 20.5%;
+
+        ul { 
+
+            list-style-type: none;
+            display: flex;
+            gap: 50px;
+           
+
+            li a {
+                position: relative;
+                color: rgba(0, 0, 0, 40%);
+                text-decoration: none;
+            }
+
+            li a::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -8px;
+                width: 100%;
+                height: 3px;
+                background: $base-color;
+                transform: scaleX(0);
+                transform-origin: right;
+                transition: -webkit-transform 250ms ease-in;
+                transition: transform 250ms ease-in;
+                transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
+            }
+
+            li a:hover::after {
+                transform: scaleX(1);
+                transform-origin: left;
+            }
+           
+        }
+
+        &__btn {
+            position: relative;
+            cursor: pointer;
+            padding: 20px;
+            background: $base-color;
+            color: #ffff;
+        }
+
+        // &__btn::after {
+        //     content: "";
+        //     position: absolute;
+        //     top: 0;
+        //     left: 0;
+        //     width: 100%;
+        //     background: white;
+        //     z-index: -1;
+        //     transition: -webkit-transform 200ms ease-in;
+        //     transition: transform 200ms ease-in;
+        //     transition: transform 200ms ease-in, -webkit-transform 200ms ease-in;
+        //     -webkit-transform: scaleX(0);
+        //     transform: scaleX(0);
+        //     -webkit-transform-origin: right;
+        //     transform-origin: right;
+        // }
+
+        // &__btn:hover::after {
+        //     transform: scaleX(1);
+        //     transform-origin: left;
+        // }
+    
+    }
+
+}
+
+
+
