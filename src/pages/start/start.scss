@@ -1,0 +1,118 @@
+@import "../../constants/variable";
+
+
+
+.intro {
+
+    display: flex;
+    justify-content: space-around;
+    margin-top: max(20vh, 30vh);
+
+    &__article {
+
+        width: 40%;
+
+        &__welcome { 
+            
+            font-weight: 400;
+            font-size: 30px;
+            color: rgba(0,0,0,60%);
+
+        }
+
+        &__job {
+
+            font-weight: 800;
+            font-size: 30px;
+            color: $base-color;
+        }
+
+        &__description { 
+
+            font-weight: 400;
+            font-size: 24px;
+            max-width: 40ch;
+            line-height: 1.7;
+        }
+    }
+
+    &__profile {
+
+        position: relative;
+
+        // to be reviwed later 
+
+        // display: grid;
+        // grid-template-columns: repeat(4, 1fr);
+        // grid-template-rows: minmax(100px, auto);
+        // grid-template-areas: 
+        // "eclipsesmall profile profile ornamentsquare"
+        // "ornamentrounded profile profile empty"
+        // "ornamentrounded eclipsebig pattern pattern"
+        // ;
+
+
+        &__image {
+
+            width: 25.25rem;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        &__ornamentsquare {
+
+            position: absolute;
+            top: -3rem;
+            right: -20px;
+            z-index: -1;
+
+            
+        }
+
+        &__eclipse {
+
+            position: absolute;
+            bottom: -10rem;
+        }
+
+        &__eclipsesmall {
+
+            position: absolute;
+            top: 0;
+            left: -10rem;
+
+        }
+
+        &__ornamentrounded {
+
+            position: absolute;
+            bottom: 0;
+            left: -7.5rem;
+            width: 11rem ;
+            aspect-ratio: 1;
+            z-index: -1;
+            
+        }
+
+        &__ornamentbin {
+            
+            position: absolute;
+            bottom: -7rem;
+            right: -3rem;
+
+        }
+
+        &__ornamenttie {
+
+
+            position: absolute;
+            bottom: -9rem;
+            right: -3rem;
+        }
+
+        
+
+
+    }
+}

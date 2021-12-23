@@ -4,8 +4,8 @@ import "./navbar.scss";
 const Navbar = () => {
     return (
         <div className="navbar">
-            <div className="navbar__left-eclipse"></div>
-            <div className="navbar__nav-items">
+            <div className="navbar__eclipse"></div>
+            <div className="navbar__nav-links">
                 <h1>Jalal Portfolio</h1>
                 <ul>
                     <li><a href="#">Home</a></li>
@@ -13,9 +13,7 @@ const Navbar = () => {
                     <li><a href="#">Skills</a></li>
                     <li><a href="#">Projects</a></li>
                 </ul>
-                <div className="navbar__nav-items__btn">
-                    Contact me
-                </div>
+                <button className="navbar__nav-links__contactbtn">Contact me</button>
             </div>
         </div>
     );
