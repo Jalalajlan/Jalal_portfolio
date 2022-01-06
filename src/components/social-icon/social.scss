@@ -1,0 +1,12 @@
+
+
+.social-icon { 
+    width: 30px;
+    height: 30px;
+    transform: scale(1);
+    transition: tranform 400ms ease-in;
+}
+
+.social-icon:hover { 
+    transform: scale(1.2);
+}

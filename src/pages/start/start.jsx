@@ -1,38 +1,50 @@
-import React from 'react';
-import './start.scss';
-import Navbar from './../../components/navbar/Navbar';
+import React from "react";
+import "./start.scss";
+import Navbar from "./../../components/navbar/Navbar";
+
 import Profile from "../../images/profile.jpg";
-import Eclipse from "../../images/eclipseBig.png";
-import EclipseSmall from "../../images/eclipseSmall.png";
-import OrnamentBin from "../../images/OrnamentBin.png";
-import OrnamentRounded from "../../images/OrnamentRounded.png";
-import OrnamentSquare from "../../images/OrnamentSquare.png";
-import OrnamentTie from "../../images/OrnamentTie.png";
-import { Intro } from './data';
+
+import Twitter from "../../images/Twitter.svg";
+import Facebook from "../../images/Facebook.svg";
+import Github from "../../images/Github.svg";
+import LinkedIn from "../../images/LinkedIn.svg";
+import SocialIcon from "../../components/social-icon/SocialIcon";
 
 const Start = () => {
-    return (
-        <div>
-            <Navbar />
-           <div className="intro">
-            <article className="intro__article">
-                <p className="intro__article__welcome">{Intro[0].title}</p>
-                <h3 className="intro__article__job">{Intro[0].job}</h3>
-                <p className="intro__article__description">{Intro[0].description}</p>
-            </article>
-            <div className="intro__profile">
-                <img className="intro__profile__image" src={Profile} alt="A profile image" />
-                <img className="intro__profile__ornamentsquare" src={OrnamentSquare} alt="pattern3" />
-                <img className="intro__profile__eclipse" src={Eclipse} alt="eclipse pattern" />
-                <img className="intro__profile__eclipsesmall" src={EclipseSmall} alt="small eclipse" />
-                <img className="intro__profile__ornamentrounded" src={OrnamentRounded} alt="pattern2" />
-                <img className="intro__profile__ornamentbin" src={OrnamentBin} alt="pattern4" />
-                <img className="intro__profile__ornamenttie" src={OrnamentTie} alt="pattern5" />
-            </div>
-           </div>
-        </div>
-    );
-};
+  const iconNames = [Twitter, Facebook, Github, LinkedIn];
 
+  return (
+    <div>
+      <Navbar />
+      <div className="socialIconContainer">
+        {iconNames.map((name) => (
+          <div key={name}>
+            <SocialIcon IconName={name} />
+          </div>
+        ))}
+      </div>
+      <div className="main-section">
+        <div className="main-section__left">
+          <h3>Hi, There!</h3>
+          <h1>I'm a Software Engineer</h1>
+          <p>
+            I’m freelance UI/UX Designer and developer based in london, England.
+            I strive to build immersive and beautiful web applications through
+            carefully carfted code and user centric design.
+          </p>
+        </div>
+        <div className="main-section__right">
+          <div className="rounded"></div>
+          <img src={Profile} className="profile-image" alt="profile image" />
+          <div className="rounded"></div>
+        </div>
+      </div>
+      <div className="aboutme">
+        <h3>About me</h3>
+        <h3>Like anyone cares</h3>
+      </div>
+    </div>
+  );
+};
 
 export default Start;
