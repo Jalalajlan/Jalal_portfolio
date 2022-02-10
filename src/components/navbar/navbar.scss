@@ -20,12 +20,32 @@ header {
 }
 
 nav li {
-  margin: 0px 10px;
+  position: relative;
 }
 
 nav a {
   text-decoration: none;
   color: rgba(0, 0, 0, 0.46);
+}
+
+nav a::after {
+  content: "";
+  width: 120%;
+  height: 4%;
+  transform: scaleX(0);
+  position: absolute;
+  left: -5px;
+  bottom: -5px;
+  background-color: rgba(39, 40, 92, 1);
+  transition: all 0.3s ease-in-out;
+}
+
+nav a:hover {
+  color: black;
+}
+
+nav a:hover::after {
+  transform: scaleX(1);
 }
 
 .contactbtn {
@@ -59,11 +79,11 @@ nav a {
     background: rgba(39, 40, 92, 1);
     padding: 10rem 2em;
     transform: translateX(100%);
-    transition: transform 400ms ease-out;
   }
 
   .show {
     transform: translateX(0%);
+    transition: transform 400ms ease-out;
   }
 
   .primary-navigation a {

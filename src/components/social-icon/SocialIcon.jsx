@@ -1,9 +1,9 @@
 import React from "react";
 import "./social.scss";
 
-const SocialIcon = ({ IconName }) => {
+const SocialIcon = ({ IconName, urlLink }) => {
   return (
-    <a href="#">
+    <a href={urlLink}>
       <img className="social-icon" src={IconName} alt="Social Icon" />
     </a>
   );

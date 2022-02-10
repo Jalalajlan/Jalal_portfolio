@@ -66,6 +66,10 @@
   object-fit: cover;
 }
 
+.profile-image:hover {
+  border: 2px solid rgba(39, 40, 92, 1);
+}
+
 .rounded {
   aspect-ratio: 1;
   border-radius: 50%;

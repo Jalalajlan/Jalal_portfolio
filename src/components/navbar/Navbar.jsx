@@ -2,37 +2,35 @@ import React, { useState } from "react";
 import "./navbar.scss";
 
 const Navbar = () => {
-  const [primaryNavigation, setPrimaryNavigation] =
-    useState("primary-navigation");
+  const [mobileNav, setMobileNav] = useState(false);
 
   return (
     <header>
       <h1>Jalal Portfolio</h1>
       <button
-        onClick={() =>
-          primaryNavigation === "primary-navigation"
-            ? setPrimaryNavigation("primary-navigation show")
-            : setPrimaryNavigation("primary-navigation")
-        }
+        onClick={() => setMobileNav(!mobileNav)}
         className="mobile-nav-toggle"
-        aria-aria-controls="primary-navigation"
-        aria-expanded="false"
       >
         <span className="sr-only">menu</span>
       </button>
       <nav>
-        <ul id="primary-navigation" className={primaryNavigation}>
+        <ul
+          id="primary-navigation"
+          className={
+            mobileNav ? "primary-navigation show" : "primary-navigation"
+          }
+        >
           <li>
-            <a href="#">Home</a>
+            <a href="www.google.com">Home</a>
           </li>
           <li>
-            <a href="#">About</a>
+            <a href="www.google.com">About</a>
           </li>
           <li>
-            <a href="#">Skills</a>
+            <a href="www.google.com">Skills</a>
           </li>
           <li>
-            <a href="#">Projects</a>
+            <a href="www.google.com">Projects</a>
           </li>
         </ul>
       </nav>
