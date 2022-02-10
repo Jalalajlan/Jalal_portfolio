@@ -11,10 +11,7 @@ const About = () => {
         <p>{pageInfo[0].subtitle}</p>
       </div>
       <div className="about-section__desc">
-        <p>{pageInfo[1].desc[0]}</p>
-        <p>{pageInfo[1].desc[1]}</p>
-        <p>{pageInfo[1].desc[2]}</p>
-        <p>{pageInfo[1].desc[3]}</p>
+        <p>{pageInfo[1].desc}</p>
       </div>
       <div className="about-section__tags-area">
         {pageInfo[2].tags?.map((name) => (

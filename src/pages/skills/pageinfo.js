@@ -22,6 +22,6 @@ export const cards = [
     icon: Mobile,
     title: "Mobile Development",
     description:
-      "I have been able to use Flutter in one of my projects and Modest experince in React Native. I've worked with Riverpod for State Management and successfully apply MVVC architecture. ",
+      "I have been able to use Flutter in one of my projects and Modest experince in React Native. I've worked with Riverpod for State Management and successfully apply MVVM architecture. ",
   },
 ];
