@@ -1,20 +1,16 @@
 import React from "react";
 import "./skill.scss";
-import { cards } from "./pageinfo";
-import Card from "./../../components/card/Card";
+import { skills } from "./skillnames";
+import Stack from "./../../components/Stack/stack";
 
 const Skills = () => {
   return (
-    <div className="cards">
-      <h2>Skills</h2>
+    <div className="skills">
+      <h1>Skills</h1>
+      <p>skills that I have aquired and built projects with.</p>
       <div className="cards-container">
-        {cards.map((card) => (
-          <Card
-            key={card.id}
-            icon={card.icon}
-            title={card.title}
-            description={card.description}
-          />
+        {skills.map((skill, id) => (
+          <Stack key={id} category={skill.category} names={skill.names} />
         ))}
       </div>
     </div>

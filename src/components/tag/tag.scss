@@ -1,5 +1,6 @@
 .tag {
-  flex-direction: row;
+  display: flex;
+  align-items: center;
   gap: 0.5em;
   padding: 1em;
   width: 180px;
@@ -19,6 +20,17 @@
   &__name {
     font-weight: 500;
   }
+}
+
+.color-pattern-2 {
+  color: white;
+  background-color: rgba(39, 40, 92, 1);
+  width: 130px;
+}
+
+.hash-pattern-2 {
+  color: black;
+  background-color: #e5e5e5;
 }
 
 .center {

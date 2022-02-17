@@ -1,9 +1,9 @@
 import React from "react";
 import "./tag.scss";
-const Tag = ({ name }) => {
+const Tag = ({ name, colorPattern = false, hashPattern = false }) => {
   return (
-    <div className="tag center">
-      <div className="tag__hash center">#</div>
+    <div className={colorPattern ? "tag" : "tag color-pattern-2"}>
+      {hashPattern ? <div className={"tag__hash center"}>#</div> : ""}
       <p className="tag__name">{name}</p>
     </div>
   );

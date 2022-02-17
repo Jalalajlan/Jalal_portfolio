@@ -1,0 +1,28 @@
+.stack-card {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1em;
+  width: 30%;
+}
+
+.stack-card h3 {
+  color: rgba(39, 40, 92, 1);
+  text-align: center;
+}
+
+.stack-card div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.stack-card div > * {
+  flex: 1 2;
+}
+
+@media (max-width: 600px) {
+  .stack-card {
+    width: 90%;
+  }
+}

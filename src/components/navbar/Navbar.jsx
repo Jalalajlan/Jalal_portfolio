@@ -6,7 +6,7 @@ const Navbar = () => {
 
   return (
     <header>
-      <h1>Jalal Portfolio</h1>
+      <h1>Jalal Ajlan</h1>
       <button
         onClick={() => setMobileNav(!mobileNav)}
         className="mobile-nav-toggle"
@@ -32,9 +32,11 @@ const Navbar = () => {
           <li>
             <a href="www.google.com">Projects</a>
           </li>
+          <li>
+            <button>Let's connect</button>
+          </li>
         </ul>
       </nav>
-      <button className="contactbtn">contact me</button>
     </header>
   );
 };

@@ -3,13 +3,13 @@ import "./start.scss";
 import Navbar from "./../../components/navbar/Navbar";
 import Profile from "../../images/profile.jpg";
 import SocialIcon from "../../components/social-icon/SocialIcon";
-import { icons } from "./pageinfo";
+import { icons } from "./icons";
 
 const Start = () => {
   return (
     <>
       <Navbar />
-      <div className="socialIconContainer">
+      <div className="socials-column">
         {icons.map((icon) => (
           <div key={icon.urlLink}>
             <SocialIcon IconName={icon.name} urlLink={icon.urlLink} />
@@ -18,8 +18,8 @@ const Start = () => {
       </div>
       <div className="main-section">
         <div className="main-section__left">
-          <h3>Hi, There!</h3>
-          <h1>I'm a Software Engineering Student</h1>
+          <h3>Hi there!</h3>
+          <h1>I'm a Software Engineer</h1>
           <p>
             I’m freelance UI/UX Designer and developer based in london, England.
             I strive to build immersive and beautiful web applications through

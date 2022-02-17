@@ -4,12 +4,15 @@
 //***************************************************//
 //***************************************************//
 
-.skills {
+.projects-section {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.9rem;
-  padding: 2em 0.2em 4em 0.2em;
+  gap: 2em;
+  padding: 2em 0.5em;
+  width: 100%;
+  background-color: white;
 
   h1 {
     position: relative;
@@ -19,22 +22,29 @@
   h1::after {
     content: "";
     position: absolute;
-    inset: auto auto -1rem -2rem;
-    width: 200%;
+    width: 150%;
     height: 5px;
+    inset: auto auto -1rem -2rem;
     background-color: rgba(39, 40, 92, 1);
+  }
+
+  p {
+    margin-bottom: 1em;
+    text-align: center;
+  }
+
+  &__projectsList {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
   }
 }
 
-.cards-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-}
-
 @media (max-width: 600px) {
-  .cards-container {
-    display: grid;
+  .projects-section {
+    &__projectsList {
+      display: grid;
+    }
   }
 }
