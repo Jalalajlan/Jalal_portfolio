@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import "./navbar.scss";
 
 const Navbar = () => {
@@ -6,7 +7,9 @@ const Navbar = () => {
 
   return (
     <header>
-      <h1>Jalal Ajlan</h1>
+      <h1>
+        Jalal <span>Ajlan</span>
+      </h1>
       <button
         onClick={() => setMobileNav(!mobileNav)}
         className="mobile-nav-toggle"
@@ -14,31 +17,25 @@ const Navbar = () => {
         <span className="sr-only">menu</span>
       </button>
       <nav>
-        <ul
-          id="primary-navigation"
-          className={
-            mobileNav ? "primary-navigation show" : "primary-navigation"
-          }
-        >
+        <ul className={mobileNav ? "primary-nav show" : "primary-nav"}>
           <li>
             <a href="www.google.com">Home</a>
           </li>
           <li>
-            <a href="www.google.com">About</a>
+            <a href="#about-section">About</a>
           </li>
           <li>
-            <a href="www.google.com">Skills</a>
+            <a href="#skills">Skills</a>
           </li>
           <li>
             <a href="www.google.com">Projects</a>
           </li>
           <li>
-            <button>Let's connect</button>
+            <button>Let's Connect</button>
           </li>
         </ul>
       </nav>
     </header>
   );
 };
-
 export default Navbar;

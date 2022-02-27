@@ -9,9 +9,13 @@ header {
   position: relative;
   padding: 1em;
   margin-bottom: 2em;
+
+  span {
+    color: rgba(39, 40, 92, 1);
+  }
 }
 
-.primary-navigation {
+.primary-nav {
   display: flex;
   align-items: center;
   gap: 1.8rem;
@@ -20,59 +24,72 @@ header {
   margin: 0;
 }
 
-nav li {
-  position: relative;
+nav {
+  li {
+    position: relative;
+  }
+
+  a {
+    font-weight: 400;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.46);
+  }
+  a::after {
+    content: "";
+    width: 120%;
+    height: 3px;
+    transform: scaleX(0);
+    position: absolute;
+    left: -5px;
+    bottom: -5px;
+    background-color: rgba(39, 40, 92, 1);
+    transition: all 0.3s ease-in-out;
+  }
+
+  a:hover {
+    font-weight: 500;
+    color: black;
+  }
+
+  a:hover::after {
+    transform: scaleX(1);
+  }
+  button {
+    font-family: "Epilogue", sans-serif;
+    font-weight: 500;
+    background-color: rgba(39, 40, 92, 1);
+    color: white;
+    padding: 1.255rem;
+    border: none;
+    box-shadow: 0 0 0 0 rgba(rgba(39, 40, 92, 1), 0.5);
+    animation: pulse 1.5s infinite;
+  }
 }
 
-nav a {
-  font-weight: 400;
-  text-decoration: none;
-  color: rgba(0, 0, 0, 0.46);
-}
-
-nav a::after {
-  content: "";
-  width: 120%;
-  height: 3px;
-  transform: scaleX(0);
-  position: absolute;
-  left: -5px;
-  bottom: -5px;
-  background-color: rgba(39, 40, 92, 1);
-  transition: all 0.3s ease-in-out;
-}
-
-nav a:hover {
-  font-weight: 500;
-  color: black;
-}
-
-nav a:hover::after {
-  transform: scaleX(1);
-}
-
-nav button {
-  padding: 1rem;
-  border: none;
-  color: white;
-  background-color: rgba(39, 40, 92, 1);
-}
-
-nav button:hover {
-  background-color: lighten(rgba(39, 40, 92, 1), 30%);
-}
-
+/* util class */
 .sr-only {
   display: none;
 }
 
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 20px rgba(rgba(39, 40, 92, 1), 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(rgba(39, 40, 92, 1), 0);
+  }
+}
+
 @media (max-width: 600px) {
-  //
   header {
     justify-content: space-between;
   }
-
-  .primary-navigation {
+  .primary-nav {
     position: fixed;
     z-index: 1000;
     inset: 0 0 0 24%;
@@ -81,13 +98,12 @@ nav button:hover {
     padding: 10rem 2em;
     transform: translateX(100%);
   }
-
   .show {
     transform: translateX(0%);
     transition: transform 400ms ease-out;
   }
 
-  .primary-navigation a {
+  .primary-nav a {
     color: white;
   }
 

@@ -5,7 +5,7 @@ import Stack from "./../../components/Stack/stack";
 
 const Skills = () => {
   return (
-    <div className="skills">
+    <div id="skills" className="skills">
       <h1>Skills</h1>
       <p>skills that I have aquired and built projects with.</p>
       <div className="cards-container">

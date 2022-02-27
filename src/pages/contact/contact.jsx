@@ -1,7 +1,58 @@
-import React from "react";
+import React, { useRef, useState } from "react";
+import Checked from "../../images/checked.png";
+import CloseIcon from "../../images/close-svgrepo-com.svg";
+import { useForm } from "react-hook-form";
+import emailjs from "emailjs-com";
+
 import "./contact.scss";
 
 const Contact = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  const [modal, setModal] = useState({ open: false, message: "fail" });
+  const contactForm = useRef();
+
+  const onSubmit = () => {
+    emailjs
+      .sendForm(
+        "service_fkzhppp",
+        "template_305q5am",
+        contactForm.current,
+        "user_tM6I16Kw3im18IEq8W31m"
+      )
+      .then(
+        (result) => {
+          if (result.text === "OK") {
+            setModal({ open: true, message: "success" });
+          } else {
+            setModal({ open: true, message: "fail" });
+          }
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
+  const closeModal = () => {
+    setModal({
+      open: false,
+    });
+  };
+
+  const renderModal = () => {
+    if (modal.open) {
+      if (modal.message === "success") {
+        return <Modal message={"success"} closeModal={closeModal} />;
+      } else {
+        return <Modal message={"fail"} closeModal={closeModal} />;
+      }
+    }
+  };
+
   return (
     <div className="contact">
       <div className="contact__headline">
@@ -14,15 +65,51 @@ const Contact = () => {
       </div>
       <div className="contact__form">
         <h1>Contact Me Now</h1>
-        <form>
+        <form ref={contactForm} onSubmit={handleSubmit(onSubmit)}>
+          {errors.name && <span>name is required</span>}
           <span>Name:</span>
-          <input type="text" />
+          <input type="text" {...register("name", { required: true })} />
           <span>Message: </span>
-          <textarea name="comment" cols="50" rows="6"></textarea>
-          <button>Send Email now</button>
+          <textarea
+            {...register("message", { required: true })}
+            cols="50"
+            rows="6"
+          ></textarea>
+          <button type="submit" className="submit-btn">
+            Send Email Now!
+          </button>
         </form>
       </div>
+      {renderModal()}
       <p>© Designed by Jalal Ajlan </p>
+    </div>
+  );
+};
+
+const Modal = ({ message, closeModal }) => {
+  return (
+    <div className="contact__modal" onClick={() => closeModal()}>
+      <div className="modal-container">
+        {message === "success" ? (
+          <>
+            <img src={Checked} alt="success message" className="success-icon" />
+            <h1>Email Sent</h1>
+            <p>Thank you for being here.. will respond to your email</p>
+            <p>Jalal Ajlan</p>
+          </>
+        ) : (
+          <>
+            <h1>Seems somthing is worng </h1>
+            <p> you can contact me directly from my email ... Thank you</p>
+          </>
+        )}
+        <img
+          src={CloseIcon}
+          alt="modal close icon"
+          className="close-icon"
+          onClick={() => closeModal()}
+        />
+      </div>
     </div>
   );
 };
