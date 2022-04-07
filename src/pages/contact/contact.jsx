@@ -11,6 +11,7 @@ const Contact = () => {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm();
   const [modal, setModal] = useState({ open: false, message: "fail" });
   const contactForm = useRef();
@@ -27,8 +28,10 @@ const Contact = () => {
         (result) => {
           if (result.text === "OK") {
             setModal({ open: true, message: "success" });
+            reset({ name: "", message: "" });
           } else {
             setModal({ open: true, message: "fail" });
+            reset({ name: "", message: "" });
           }
         },
         (error) => {
@@ -54,7 +57,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact">
+    <div id="contact" className="contact">
       <div className="contact__headline">
         <p>Get in touch now</p>
         <h1>Recommend Me To Your Leader</h1>

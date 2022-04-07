@@ -5,7 +5,7 @@ import Project from "./../../components/project/project";
 
 const Projects = () => {
   return (
-    <div className="projects-section">
+    <div id="projects" className="projects-section">
       <h1>projects</h1>
       <p>A few recent design and coding projects that was held in Group</p>
       <div className="projects-section__projectsList">

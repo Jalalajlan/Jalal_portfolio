@@ -11,7 +11,7 @@ export const projects = [
   {
     imageSource: servicifyMobileApp,
     description:
-      "Servicify mobile application: the same notion with web version but it is mobile base application, this project was developed with flutter for the frontend and MongoDB and Nodejs for backend.",
+      "Servicify mobile application: the same notion with web-based version but it is mobile based application, this project was developed with flutter for the frontend and MongoDB and Nodejs for backend.",
   },
   {
     imageSource: portfolio,

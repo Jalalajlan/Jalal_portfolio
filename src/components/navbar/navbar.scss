@@ -2,6 +2,7 @@ $eclipse_width: 300px;
 
 header {
   width: 100%;
+  position: sticky;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -54,6 +55,7 @@ nav {
   a:hover::after {
     transform: scaleX(1);
   }
+
   button {
     font-family: "Epilogue", sans-serif;
     font-weight: 500;
@@ -63,6 +65,10 @@ nav {
     border: none;
     box-shadow: 0 0 0 0 rgba(rgba(39, 40, 92, 1), 0.5);
     animation: pulse 1.5s infinite;
+
+    a {
+      color: white;
+    }
   }
 }
 

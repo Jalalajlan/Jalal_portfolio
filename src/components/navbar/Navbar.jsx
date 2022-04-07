@@ -19,7 +19,7 @@ const Navbar = () => {
       <nav>
         <ul className={mobileNav ? "primary-nav show" : "primary-nav"}>
           <li>
-            <a href="www.google.com">Home</a>
+            <a href="/">Home</a>
           </li>
           <li>
             <a href="#about-section">About</a>
@@ -28,10 +28,12 @@ const Navbar = () => {
             <a href="#skills">Skills</a>
           </li>
           <li>
-            <a href="www.google.com">Projects</a>
+            <a href="#projects">Projects</a>
           </li>
           <li>
-            <button>Let's Connect</button>
+            <button href="#contact">
+              <a href="#contact">Let's Connect</a>
+            </button>
           </li>
         </ul>
       </nav>
