@@ -21,7 +21,7 @@ export const projects = [
   {
     imageSource: portfolio,
     description:
-      "Rubric management website: User can create customized rubric with his own preference and can receive notification about any changes to the rubric, developed with Java JSP with factory design pattern and observer design pattern.",
+      "My portfolio website developed with Reactjs and css framework sass",
     url: "https://stellar-hamster-84075b.netlify.app/",
     repoUrl: "https://github.com/Jalalajlan/Jalal_portfolio",
   },
