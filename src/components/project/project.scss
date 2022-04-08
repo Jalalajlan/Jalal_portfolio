@@ -57,12 +57,15 @@
   font-family: "Epilogue";
   font-weight: 400;
   background-color: rgba(44, 114, 220, 0.877);
-  color: white;
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
 }
 
 .overlay button:hover {
-  background-color: white;
-  color: darkslateblue;
+  background-color: lighten($color: rgba(44, 114, 220, 0.877), $amount: 10);
 }
 
 @media (max-width: 600px) {
