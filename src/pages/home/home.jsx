@@ -31,7 +31,7 @@ const Home = () => {
           <button>
             <a
               target="_blank"
-              href="https://drive.google.com/file/d/1IzMMuq3OJc8byT9yCWvWvvV0mx4v0ic2/view?usp=share_link"
+              href="https://drive.google.com/file/d/1uNE6VRsvGJfFEv-xTOeojLkTcAXjuFR2/view?usp=share_link"
               rel="noreferrer"
             >
               View My Resume
