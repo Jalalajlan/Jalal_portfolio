@@ -7,7 +7,7 @@ const Projects = () => {
   return (
     <div id="projects" className="projects-section">
       <h1>projects</h1>
-      <p>A few recent design and coding projects that was held in Group</p>
+      <p>A list of works that I have done</p>
       <div className="projects-section__projectsList">
         {projects.map((project, id) => (
           <Project

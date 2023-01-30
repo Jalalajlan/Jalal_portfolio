@@ -1,30 +1,21 @@
-import React from "react";
-import "./about.scss";
-import Profile from "../../images/profile.jpg";
-import { pageInfo } from "./aboutData";
+// import React from "react";
+// import "./about.scss";
+// import Profile from "../../images/jalal_profile.jpg";
 
-const About = () => {
-  return (
-    <div id="about-section" className="about">
-      <div className="about__headline">
-        <h1>{pageInfo[0].title}</h1>
-        <p>{pageInfo[0].subtitle}</p>
-      </div>
-      <div className="about__layout">
-        <div className="about__layout__desc">
-          <p>{pageInfo[1].desc[0]}</p>
-          <br />
-          <p>{pageInfo[1].desc[1]}</p>
-          <br />
-          <p>{pageInfo[1].desc[2]}</p>
-          <br />
-        </div>
-        <div className="about__layout__profile">
-          <img src={Profile} alt="left side portait" />
-        </div>
-      </div>
-    </div>
-  );
-};
+// const About = () => {
+//   return (
+//     <div id="about-section" className="about">
+//       <div className="about__headline">
+//         <h1>Experience</h1>
+//       </div>
+//       <div className="about__layout">
+//         <div className="about__layout__desc"></div>
+//         <div className="about__layout__profile">
+//           <img src={Profile} alt="left side portrait" />
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
 
-export default About;
+// export default About;
