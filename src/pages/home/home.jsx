@@ -28,15 +28,16 @@ const Home = () => {
             insights in the field of computer science. Have gained a decent
             knowledge in topics such #web-development #mobile-development.
           </p>
-          <button>
-            <a
-              target="_blank"
-              href="https://drive.google.com/file/d/1uNE6VRsvGJfFEv-xTOeojLkTcAXjuFR2/view?usp=share_link"
-              rel="noreferrer"
-            >
-              View My Resume
-            </a>
-          </button>
+          <a
+            target="_blank"
+            href="https://drive.google.com/file/d/1uNE6VRsvGJfFEv-xTOeojLkTcAXjuFR2/view?usp=share_link"
+            rel="noreferrer"
+            className="main-section__left__view-resume-link"
+          >
+            <button className="main-section__left__view-resume-link__button">
+              View Resume
+            </button>
+          </a>
         </div>
         <div className="main-section__right">
           <div className="rounded"></div>
