@@ -1,13 +1,13 @@
 $eclipse_width: 300px;
 
-header {
+.navbar {
   width: 100%;
-  position: sticky;
-  top: 0;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  position: sticky;
+  top: 0;
   padding: 2em;
   margin-bottom: 2em;
   z-index: 100;
@@ -17,13 +17,19 @@ header {
   }
 }
 
+.scrolled-navbar {
+  padding: 1.3em;
+  background-color: white;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
 .primary-nav {
+  padding: 0;
+  margin: 0;
   display: flex;
   align-items: center;
   gap: 1.8rem;
   list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
 nav {
@@ -36,9 +42,10 @@ nav {
     text-decoration: none;
     color: rgba(0, 0, 0, 0.46);
   }
+
   a::after {
     content: "";
-    width: 120%;
+    width: 110%;
     height: 3px;
     transform: scaleX(0);
     position: absolute;
@@ -58,15 +65,15 @@ nav {
   }
 }
 
-/* util class */
 .sr-only {
   display: none;
 }
 
 @media (max-width: 600px) {
-  header {
+  .navbar {
     justify-content: space-between;
   }
+
   .primary-nav {
     position: fixed;
     z-index: 1000;
@@ -76,6 +83,7 @@ nav {
     padding: 10rem 2em;
     transform: translateX(100%);
   }
+
   .show {
     transform: translateX(0%);
     transition: transform 400ms ease-out;
@@ -97,6 +105,6 @@ nav {
   }
 
   .sr-only {
-    visibility: hidden;
+    display: block;
   }
 }
